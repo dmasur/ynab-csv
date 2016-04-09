@@ -11,14 +11,15 @@ numberfy = (val) ->
     # check for negative signs or parenthases.
     is_negative = if (val.match("-") || val.match(/\(.*\)/)) then -1 else 1
     # remove any commas
-    val = val.replace(/,/g, "")
+    val = val.replace(/,/g, ".")
     # return just the number and make it negative if needed.
     +(val.match(/\d+.?\d*/)[0]) * is_negative
   else
     val
 
 # Uses moment.js to parse and format the date into the correct format
-parseDate = (val) -> moment(val).format('MM/DD/YYYY') if val && val.length > 0
+parseDate = (val) ->
+  moment(val, "DD.MM.YYYY").format('MM/DD/YYYY') if val && val.length > 0
 
 
 # This class does all the heavy lifting.
