@@ -7,7 +7,7 @@ German Edition
 ----
 Tool for making your CSV files ready to import into YNAB.
 
-http://halloffame.github.io/ynab-csv/
+http://dmasur.github.io/ynab-csv/
 
 **NOTE:** currently works best in Chrome. See "Known Issues" below for more details.
 
